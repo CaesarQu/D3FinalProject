@@ -1,0 +1,12 @@
+State,Blood Deficiency,Blood Stasis,Irritable,Phlegmatic Hygrosis,Qi Deficiency,Qi Stagnation,Dampness Heat,Yin Deficiency,Yang Deficiency,Sthenia Heat,Harmony
+Blood Deficiency,1,6,4,1,3,4,7,3,4,1,1
+Blood Stasis,1,1,3,1,3,2,4,3,1,1,1
+Irritable,1,3,1,3,3,5,2,2,2,4,1
+Phlegmatic Hygrosis,4,7,5,1,5,5,3,3,1,2,1
+Qi Deficiency,3,3,2,3,1,2,1,4,1,1,1
+Qi Stagnation,2,8,6,7,2,1,4,2,1,1,1
+Dampness Heat,4,5,2,4,3,7,1,3,4,3,1
+Yin Deficiency,4,10,4,5,4,6,2,1,8,2,1
+Yang Deficiency,4,5,10,7,6,3,2,2,1,1,1
+Sthenia Heat,4,3,5,2,3,5,2,5,2,1,1
+Harmony,1,1,1,1,1,1,1,1,1,1,1

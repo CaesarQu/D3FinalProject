@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font: 10px sans-serif;
+}
+
+svg text{
+  fill:grey;
+  font-size:11px;
+}
+svg .values text{
+  pointer-events:none;
+  stroke-width: 0.5px;
+}
+.groups:hover{
+  cursor:pointer;
+  font-weight:bold;
+}
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://vizjs.org/viz.v1.1.0.min.js"></script>
+<script>
+
+var data = [['Blood Deficiency','Blood Stasis',6]
+,['Blood Deficiency','Irritable',4]
+,['Blood Deficiency','Phlegmatic Hygrosis',0]
+,['Blood Deficiency','Qi Deficiency',3]
+,['Blood Deficiency','Qi Stagnation',4]
+,['Blood Deficiency','Dampness Heat',7]
+,['Blood Deficiency','Yin Deficiency',3]
+,['Blood Deficiency','Yang Deficiency',4]
+,['Blood Deficiency','Sthenia Heat',5]
+,['Blood Deficiency','Harmony',1]
+,['Blood Stasis','Blood Deficiency',0]
+,['Blood Stasis','Irritable',2]
+,['Blood Stasis','Phlegmatic Hygrosis',0]
+,['Blood Stasis','Qi Deficiency',2]
+,['Blood Stasis','Qi Stagnation',1]
+,['Blood Stasis','Dampness Heat',3]
+,['Blood Stasis','Yin Deficiency',2]
+,['Blood Stasis','Yang Deficiency',0]
+,['Blood Stasis','Sthenia Heat',0]
+,['Blood Stasis','Harmony',1]
+,['Irritable','Blood Deficiency',0]
+,['Irritable','Blood Stasis',2]
+,['Irritable','Phlegmatic Hygrosis',2]
+,['Irritable','Qi Deficiency',2]
+,['Irritable','Qi Stagnation',4]
+,['Irritable','Dampness Heat',1]
+,['Irritable','Yin Deficiency',1]
+,['Irritable','Yang Deficiency',1]
+,['Irritable','Sthenia Heat',3]
+,['Irritable','Harmony',1]
+,['Phlegmatic Hygrosis','Blood Deficiency',3]
+,['Phlegmatic Hygrosis','Blood Stasis',6]
+,['Phlegmatic Hygrosis','Irritable',4]
+,['Phlegmatic Hygrosis','Qi Deficiency',4]
+,['Phlegmatic Hygrosis','Qi Stagnation',4]
+,['Phlegmatic Hygrosis','Dampness Heat',2]
+,['Phlegmatic Hygrosis','Yin Deficiency',2]
+,['Phlegmatic Hygrosis','Yang Deficiency',0]
+,['Phlegmatic Hygrosis','Sthenia Heat',1]
+,['Phlegmatic Hygrosis','Harmony',1]
+,['Qi Deficiency','Blood Deficiency',2]
+,['Qi Deficiency','Blood Stasis',2]
+,['Qi Deficiency','Irritable',1]
+,['Qi Deficiency','Phlegmatic Hygrosis',2]
+,['Qi Deficiency','Qi Stagnation',1]
+,['Qi Deficiency','Dampness Heat',0]
+,['Qi Deficiency','Yin Deficiency',3]
+,['Qi Deficiency','Yang Deficiency',0]
+,['Qi Deficiency','Sthenia Heat',0]
+,['Qi Deficiency','Harmony',1]
+,['Qi Stagnation','Blood Deficiency',1]
+,['Qi Stagnation','Blood Stasis',7]
+,['Qi Stagnation','Irritable',5]
+,['Qi Stagnation','Phlegmatic Hygrosis',6]
+,['Qi Stagnation','Qi Deficiency',1]
+,['Qi Stagnation','Dampness Heat',3]
+,['Qi Stagnation','Yin Deficiency',1]
+,['Qi Stagnation','Yang Deficiency',0]
+,['Qi Stagnation','Sthenia Heat',0]
+,['Qi Stagnation','Harmony',1]
+,['Dampness Heat','Blood Deficiency',3]
+,['Dampness Heat','Blood Stasis',4]
+,['Dampness Heat','Irritable',1]
+,['Dampness Heat','Phlegmatic Hygrosis',3]
+,['Dampness Heat','Qi Deficiency',2]
+,['Dampness Heat','Qi Stagnation',6]
+,['Dampness Heat','Yin Deficiency',2]
+,['Dampness Heat','Yang Deficiency',3]
+,['Dampness Heat','Sthenia Heat',2]
+,['Dampness Heat','Harmony',1]
+,['Yin Deficiency','Blood Deficiency',3]
+,['Yin Deficiency','Blood Stasis',9]
+,['Yin Deficiency','Irritable',3]
+,['Yin Deficiency','Phlegmatic Hygrosis',4]
+,['Yin Deficiency','Qi Deficiency',3]
+,['Yin Deficiency','Qi Stagnation',5]
+,['Yin Deficiency','Dampness Heat',1]
+,['Yin Deficiency','Yang Deficiency',7]
+,['Yin Deficiency','Sthenia Heat',1]
+,['Yin Deficiency','Harmony',1]
+,['Yang Deficiency','Blood Deficiency',3]
+,['Yang Deficiency','Blood Stasis',4]
+,['Yang Deficiency','Irritable',9]
+,['Yang Deficiency','Phlegmatic Hygrosis',6]
+,['Yang Deficiency','Qi Deficiency',5]
+,['Yang Deficiency','Qi Stagnation',2]
+,['Yang Deficiency','Dampness Heat',1]
+,['Yang Deficiency','Yin Deficiency',1]
+,['Yang Deficiency','Sthenia Heat',0]
+,['Yang Deficiency','Harmony',1]
+,['Sthenia Heat','Blood Deficiency',3]
+,['Sthenia Heat','Blood Stasis',2]
+,['Sthenia Heat','Irritable',4]
+,['Sthenia Heat','Phlegmatic Hygrosis',1]
+,['Sthenia Heat','Qi Deficiency',2]
+,['Sthenia Heat','Qi Stagnation',4]
+,['Sthenia Heat','Dampness Heat',2]
+,['Sthenia Heat','Yin Deficiency',4]
+,['Sthenia Heat','Yang Deficiency',1]
+,['Sthenia Heat','Harmony',1]
+,['Harmony','Blood Stasis',1]
+,['Harmony','Blood Deficiency',1]
+,['Harmony','Irritable',1]
+,['Harmony','Phlegmatic Hygrosis',1]
+,['Harmony','Qi Deficiency',1]
+,['Harmony','Qi Stagnation',1]
+,['Harmony','Yin Deficiency',1]
+,['Harmony','Yang Deficiency',1]
+,['Harmony','Sthenia Heat',1]
+,['Harmony','Dampness Heat',1]
+];
+
+var colors = {
+"Blood Deficiency": "#da4480"
+,"Blood Stasis":    "#5ab449"
+,"Irritable":    "#7f5acd"
+,"Phlegmatic Hygrosis":        "#aab740"
+,"Qi Deficiency": "#ce58c0"
+,"Qi Stagnation":        "#50a26e"
+,"Dampness Heat": "#d1434b"
+,"Yin Deficiency":      "#45c0bc"
+,"Yang Deficiency":"#ce5929"
+,"Sthenia Heat": "#4e7bda"
+,"Harmony":"#000000"
+};
+
+var sortOrder =[
+"Blood Deficiency"
+,"Blood Stasis"
+,"Irritable"
+,"Phlegmatic Hygrosis"
+,"Qi Deficiency"
+,"Qi Stagnation"
+,"Dampness Heat"
+,"Yin Deficiency"
+,"Yang Deficiency"
+,"Sthenia Heat"
+,"Harmony"
+];
+
+function sort(a,b){ return d3.ascending(sortOrder.indexOf(a),sortOrder.indexOf(b)); }
+
+var ch = viz.ch().data(data)
+      .padding(.01)
+      .sort(sort)
+	  .innerRadius(430)
+	  .outerRadius(450)
+	  .duration(1000)
+	  .chordOpacity(0.3)
+	  .labelPadding(.03)
+      .fill(function(d){ return colors[d];});
+
+var width=1200, height=1100;
+
+var svg = d3.select("body").append("svg").attr("height",height).attr("width",width);
+
+svg.append("g").attr("transform", "translate(600,550)").call(ch);
+
+// adjust height of frame in bl.ocks.org
+d3.select(self.frameElement).style("height", height+"px").style("width", width+"px");     
+</script>
