@@ -1,0 +1,1198 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/toup.css" />
+		<link rel="stylesheet" href="css/radio.css" />
+		<link rel="stylesheet" href="swiper/swiper.min.css">
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/fontSize.js"></script>
+		<script src="js/function.js" charset="UTF-8"></script>
+
+		<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script src="https://www.amcharts.com/lib/3/radar.js"></script>
+		<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+		<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+		<script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+		<style>
+			#chartdiv {
+				width: 100%;
+				height: 500px;
+			}
+		</style>
+
+		<title>健康状态测试精简版</title>
+
+	</head>
+
+	<body>
+
+		<section class="toup" id="t1">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<div class="con">
+					<h1>Physical fitness test and health assessment</h1>
+					<p>The test of health status and health assessment is to assess the physical and syndromes of the human body. From the overall physical characteristics and the overall evaluation of the characteristics of syndromes, while its caused by physical and syndrome changes in the causes of analysis, can effectively help TCM accurate differentiation.</p>
+				</div>
+				<a href="javascript:;" class="jion">Click to start!</a>
+			</div>
+		</section>
+		<section class="toup" id="t2">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>Pre-test of physical health</h3>
+								<div class="f"><span>1</span>您的舌下絡脈曲張嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yuxue1" id="yuxue11" value="0" /><label for="yuxue11">No</label></div>
+									<div class="input"><input type="radio" name="yuxue1" id="yuxue12" value="2" /><label for="yuxue12">A little </label></div>
+									<div class="input"><input type="radio" name="yuxue1" id="yuxue13" value="4" /><label for="yuxue13">Obviously</label></div>
+									<div class="input"><input type="radio" name="yuxue1" id="yuxue14" value="6" /><label for="yuxue14">Often</label></div>
+									<div class="input"><input type="radio" name="yuxue1" id="yuxue15" value="8" /><label for="yuxue15">Frequently</label></div>
+								</div>
+								<div class="con">
+
+									<p font-size:1px>可左右滑动换题</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您曾有外伤或手术嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yuxue2" id="yuxue21" value="0" /><label for="yuxue21">No</label></div>
+									<div class="input"><input type="radio" name="yuxue2" id="yuxue22" value="2" /><label for="yuxue22">A little </label></div>
+									<div class="input"><input type="radio" name="yuxue2" id="yuxue23" value="4" /><label for="yuxue23">Obviously</label></div>
+									<div class="input"><input type="radio" name="yuxue2" id="yuxue24" value="6" /><label for="yuxue24">Often</label></div>
+									<div class="input"><input type="radio" name="yuxue2" id="yuxue25" value="8" /><label for="yuxue25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否怕冷嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yangxu1" id="yangxu11" value="0" /><label for="yangxu11">No</label></div>
+									<div class="input"><input type="radio" name="yangxu1" id="yangxu12" value="2" /><label for="yangxu12">A little </label></div>
+									<div class="input"><input type="radio" name="yangxu1" id="yangxu13" value="4" /><label for="yangxu13">Obviously</label></div>
+									<div class="input"><input type="radio" name="yangxu1" id="yangxu14" value="6" /><label for="yangxu14">Often</label></div>
+									<div class="input"><input type="radio" name="yangxu1" id="yangxu15" value="8" /><label for="yangxu15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>4</span>您穿的衣服是否比别人多？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yangxu2" id="yangxu21" value="0" /><label for="yangxu21">No</label></div>
+									<div class="input"><input type="radio" name="yangxu2" id="yangxu22" value="2" /><label for="yangxu22">A little </label></div>
+									<div class="input"><input type="radio" name="yangxu2" id="yangxu23" value="4" /><label for="yangxu23">Obviously</label></div>
+									<div class="input"><input type="radio" name="yangxu2" id="yangxu24" value="6" /><label for="yangxu24">Often</label></div>
+									<div class="input"><input type="radio" name="yangxu2" id="yangxu25" value="8" /><label for="yangxu25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>5</span>您平静时脈搏每分鐘接近85-100次嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="xuexu1" id="xuexu11" value="0" /><label for="xuexu11">No</label></div>
+									<div class="input"><input type="radio" name="xuexu1" id="xuexu12" value="2" /><label for="xuexu12">A little </label></div>
+									<div class="input"><input type="radio" name="xuexu1" id="xuexu13" value="4" /><label for="xuexu13">Obviously</label></div>
+									<div class="input"><input type="radio" name="xuexu1" id="xuexu14" value="6" /><label for="xuexu14">Often</label></div>
+									<div class="input"><input type="radio" name="xuexu1" id="xuexu15" value="8" /><label for="xuexu15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>6</span>蹲下後再站立起，會覺得眼前發黑或眼冒金星？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="xuexu2" id="xuexu21" value="0" /><label for="xuexu21">No</label></div>
+									<div class="input"><input type="radio" name="xuexu2" id="xuexu22" value="2" /><label for="xuexu22">A little </label></div>
+									<div class="input"><input type="radio" name="xuexu2" id="xuexu23" value="4" /><label for="xuexu23">Obviously</label></div>
+									<div class="input"><input type="radio" name="xuexu2" id="xuexu24" value="6" /><label for="xuexu24">Often</label></div>
+									<div class="input"><input type="radio" name="xuexu2" id="xuexu25" value="8" /><label for="xuexu25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>7</span>您是否曾经大量丢失过体液（多汗，呕吐，腹泻，哺乳，流血，精液）？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yinxu1" id="yinxu11" value="0" /><label for="yinxu11">No</label></div>
+									<div class="input"><input type="radio" name="yinxu1" id="yinxu12" value="2" /><label for="yinxu12">A little </label></div>
+									<div class="input"><input type="radio" name="yinxu1" id="yinxu13" value="4" /><label for="yinxu13">Obviously</label></div>
+									<div class="input"><input type="radio" name="yinxu1" id="yinxu14" value="6" /><label for="yinxu14">Often</label></div>
+									<div class="input"><input type="radio" name="yinxu1" id="yinxu15" value="8" /><label for="yinxu15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>8</span>您是否经常熬夜吗？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yinxu2" id="yinxu21" value="0" /><label for="yinxu21">No</label></div>
+									<div class="input"><input type="radio" name="yinxu2" id="yinxu22" value="2" /><label for="yinxu22">A little </label></div>
+									<div class="input"><input type="radio" name="yinxu2" id="yinxu23" value="4" /><label for="yinxu23">Obviously</label></div>
+									<div class="input"><input type="radio" name="yinxu2" id="yinxu24" value="6" /><label for="yinxu24">Often</label></div>
+									<div class="input"><input type="radio" name="yinxu2" id="yinxu25" value="8" /><label for="yinxu25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>9</span>您是否经常觉得疲劳？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qixu1" id="qixu11" value="0" /><label for="qixu11">No</label></div>
+									<div class="input"><input type="radio" name="qixu1" id="qixu12" value="2" /><label for="qixu12">A little </label></div>
+									<div class="input"><input type="radio" name="qixu1" id="qixu13" value="4" /><label for="qixu13">Obviously</label></div>
+									<div class="input"><input type="radio" name="qixu1" id="qixu14" value="6" /><label for="qixu14">Often</label></div>
+									<div class="input"><input type="radio" name="qixu1" id="qixu15" value="8" /><label for="qixu15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>10</span>您说话的声音无力吗？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qixu2" id="qixu21" value="0" /><label for="qixu21">No</label></div>
+									<div class="input"><input type="radio" name="qixu2" id="qixu22" value="2" /><label for="qixu22">A little </label></div>
+									<div class="input"><input type="radio" name="qixu2" id="qixu23" value="4" /><label for="qixu23">Obviously</label></div>
+									<div class="input"><input type="radio" name="qixu2" id="qixu24" value="6" /><label for="qixu24">Often</label></div>
+									<div class="input"><input type="radio" name="qixu2" id="qixu25" value="8" /><label for="qixu25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>11</span>您是否很容易生气？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qiyu1" id="qiyu11" value="0" /><label for="qiyu11">No</label></div>
+									<div class="input"><input type="radio" name="qiyu1" id="qiyu12" value="2" /><label for="qiyu12">A little </label></div>
+									<div class="input"><input type="radio" name="qiyu1" id="qiyu13" value="4" /><label for="qiyu13">Obviously</label></div>
+									<div class="input"><input type="radio" name="qiyu1" id="qiyu14" value="6" /><label for="qiyu14">Often</label></div>
+									<div class="input"><input type="radio" name="qiyu1" id="qiyu15" value="8" /><label for="qiyu15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>12</span>您感到压力很大？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qiyu2" id="qiyu21" value="0" /><label for="qiyu21">No</label></div>
+									<div class="input"><input type="radio" name="qiyu2" id="qiyu22" value="2" /><label for="qiyu22">A little </label></div>
+									<div class="input"><input type="radio" name="qiyu2" id="qiyu23" value="4" /><label for="qiyu23">Obviously</label></div>
+									<div class="input"><input type="radio" name="qiyu2" id="qiyu24" value="6" /><label for="qiyu24">Often</label></div>
+									<div class="input"><input type="radio" name="qiyu2" id="qiyu25" value="8" /><label for="qiyu25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>13</span>您是否腹部赘肉很多？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="tanshi1" id="tanshi11" value="0" /><label for="tanshi11">No</label></div>
+									<div class="input"><input type="radio" name="tanshi1" id="tanshi12" value="2" /><label for="tanshi12">A little </label></div>
+									<div class="input"><input type="radio" name="tanshi1" id="tanshi13" value="4" /><label for="tanshi13">Obviously</label></div>
+									<div class="input"><input type="radio" name="tanshi1" id="tanshi14" value="6" /><label for="tanshi14">Often</label></div>
+									<div class="input"><input type="radio" name="tanshi1" id="tanshi15" value="8" /><label for="tanshi15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>14</span>您是否皮肤油脂分泌多，特别是在T区？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="tanshi2" id="tanshi21" value="0" /><label for="tanshi21">No</label></div>
+									<div class="input"><input type="radio" name="tanshi2" id="tanshi22" value="2" /><label for="tanshi22">A little </label></div>
+									<div class="input"><input type="radio" name="tanshi2" id="tanshi23" value="4" /><label for="tanshi23">Obviously</label></div>
+									<div class="input"><input type="radio" name="tanshi2" id="tanshi24" value="6" /><label for="tanshi24">Often</label></div>
+									<div class="input"><input type="radio" name="tanshi2" id="tanshi25" value="8" /><label for="tanshi25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>15</span>您受到全身或局部的炎症的困扰？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="shire1" id="shire11" value="0" /><label for="shire11">No</label></div>
+									<div class="input"><input type="radio" name="shire1" id="shire12" value="2" /><label for="shire12">A little </label></div>
+									<div class="input"><input type="radio" name="shire1" id="shire13" value="4" /><label for="shire13">Obviously</label></div>
+									<div class="input"><input type="radio" name="shire1" id="shire14" value="6" /><label for="shire14">Often</label></div>
+									<div class="input"><input type="radio" name="shire1" id="shire15" value="8" /><label for="shire15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>16</span>您是否经常饮酒？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="shire2" id="shire21" value="0" /><label for="shire21">No</label></div>
+									<div class="input"><input type="radio" name="shire2" id="shire22" value="2" /><label for="shire22">A little </label></div>
+									<div class="input"><input type="radio" name="shire2" id="shire23" value="4" /><label for="shire23">Obviously</label></div>
+									<div class="input"><input type="radio" name="shire2" id="shire24" value="6" /><label for="shire24">Often</label></div>
+									<div class="input"><input type="radio" name="shire2" id="shire25" value="8" /><label for="shire25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>17</span>您是否怕熱，愛出汗？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="re1" id="re11" value="0" /><label for="re11">No</label></div>
+									<div class="input"><input type="radio" name="re1" id="re12" value="2" /><label for="re12">A little </label></div>
+									<div class="input"><input type="radio" name="re1" id="re13" value="4" /><label for="re13">Obviously</label></div>
+									<div class="input"><input type="radio" name="re1" id="re14" value="6" /><label for="re14">Often</label></div>
+									<div class="input"><input type="radio" name="re1" id="re15" value="8" /><label for="re15">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>18</span>您是否经常大便干如羊屎狀？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="re2" id="re21" value="0" /><label for="re21">No</label></div>
+									<div class="input"><input type="radio" name="re2" id="re22" value="2" /><label for="re22">A little </label></div>
+									<div class="input"><input type="radio" name="re2" id="re23" value="4" /><label for="re23">Obviously</label></div>
+									<div class="input"><input type="radio" name="re2" id="re24" value="6" /><label for="re24">Often</label></div>
+									<div class="input"><input type="radio" name="re2" id="re25" value="8" /><label for="re25">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+
+		<section class="toup" id="yuxue">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>瘀血自测题</h3>
+								<div class="f"><span>1</span>您的皮肤粗糙嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yuxue3" id="yuxue31" value="0" /><label for="yuxue31">No</label></div>
+									<div class="input"><input type="radio" name="yuxue3" id="yuxue32" value="1" /><label for="yuxue32">A little </label></div>
+									<div class="input"><input type="radio" name="yuxue3" id="yuxue33" value="2" /><label for="yuxue33">Obviously</label></div>
+									<div class="input"><input type="radio" name="yuxue3" id="yuxue34" value="3" /><label for="yuxue34">Often</label></div>
+									<div class="input"><input type="radio" name="yuxue3" id="yuxue35" value="4" /><label for="yuxue35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您發現有固定部位的疼痛呢？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yuxue4" id="yuxue41" value="0" /><label for="yuxue41">No</label></div>
+									<div class="input"><input type="radio" name="yuxue4" id="yuxue42" value="1" /><label for="yuxue42">A little </label></div>
+									<div class="input"><input type="radio" name="yuxue4" id="yuxue43" value="2" /><label for="yuxue43">Obviously</label></div>
+									<div class="input"><input type="radio" name="yuxue4" id="yuxue44" value="3" /><label for="yuxue44">Often</label></div>
+									<div class="input"><input type="radio" name="yuxue4" id="yuxue45" value="4" /><label for="yuxue45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您脸上有斑或黑眼圈嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yuxue5" id="yuxue51" value="0" /><label for="yuxue51">No</label></div>
+									<div class="input"><input type="radio" name="yuxue5" id="yuxue52" value="1" /><label for="yuxue52">A little </label></div>
+									<div class="input"><input type="radio" name="yuxue5" id="yuxue53" value="2" /><label for="yuxue53">Obviously</label></div>
+									<div class="input"><input type="radio" name="yuxue5" id="yuxue54" value="3" /><label for="yuxue54">Often</label></div>
+									<div class="input"><input type="radio" name="yuxue5" id="yuxue55" value="4" /><label for="yuxue55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="yangxu">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>阳虚自测题</h3>
+								<div class="f"><span>1</span>您是否不爱出汗或尿频吗？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yangxu3" id="yangxu31" value="0" /><label for="yangxu31">No</label></div>
+									<div class="input"><input type="radio" name="yangxu3" id="yangxu32" value="1" /><label for="yangxu32">A little </label></div>
+									<div class="input"><input type="radio" name="yangxu3" id="yangxu33" value="2" /><label for="yangxu33">Obviously</label></div>
+									<div class="input"><input type="radio" name="yangxu3" id="yangxu34" value="3" /><label for="yangxu34">Often</label></div>
+									<div class="input"><input type="radio" name="yangxu3" id="yangxu35" value="4" /><label for="yangxu35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否吃了冷的东西会腹痛？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yangxu4" id="yangxu41" value="0" /><label for="yangxu41">No</label></div>
+									<div class="input"><input type="radio" name="yangxu4" id="yangxu42" value="1" /><label for="yangxu42">A little </label></div>
+									<div class="input"><input type="radio" name="yangxu4" id="yangxu43" value="2" /><label for="yangxu43">Obviously</label></div>
+									<div class="input"><input type="radio" name="yangxu4" id="yangxu44" value="3" /><label for="yangxu44">Often</label></div>
+									<div class="input"><input type="radio" name="yangxu4" id="yangxu45" value="4" /><label for="yangxu45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否No原因的性欲下降？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yangxu5" id="yangxu51" value="0" /><label for="yangxu51">No</label></div>
+									<div class="input"><input type="radio" name="yangxu5" id="yangxu52" value="1" /><label for="yangxu52">A little </label></div>
+									<div class="input"><input type="radio" name="yangxu5" id="yangxu53" value="2" /><label for="yangxu53">Obviously</label></div>
+									<div class="input"><input type="radio" name="yangxu5" id="yangxu54" value="3" /><label for="yangxu54">Often</label></div>
+									<div class="input"><input type="radio" name="yangxu5" id="yangxu55" value="4" /><label for="yangxu55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="xuexu">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>血虚自测题</h3>
+								<div class="f"><span>1</span>您的面色略有蒼白或萎黃嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="xuexu3" id="xuexu31" value="0" /><label for="xuexu31">No</label></div>
+									<div class="input"><input type="radio" name="xuexu3" id="xuexu32" value="1" /><label for="xuexu32">A little </label></div>
+									<div class="input"><input type="radio" name="xuexu3" id="xuexu33" value="2" /><label for="xuexu33">Obviously</label></div>
+									<div class="input"><input type="radio" name="xuexu3" id="xuexu34" value="3" /><label for="xuexu34">Often</label></div>
+									<div class="input"><input type="radio" name="xuexu3" id="xuexu35" value="4" /><label for="xuexu35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您的頭髮是否已脫落或乾枯無光澤？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="xuexu4" id="xuexu41" value="0" /><label for="xuexu41">No</label></div>
+									<div class="input"><input type="radio" name="xuexu4" id="xuexu42" value="1" /><label for="xuexu42">A little </label></div>
+									<div class="input"><input type="radio" name="xuexu4" id="xuexu43" value="2" /><label for="xuexu43">Obviously</label></div>
+									<div class="input"><input type="radio" name="xuexu4" id="xuexu44" value="3" /><label for="xuexu44">Often</label></div>
+									<div class="input"><input type="radio" name="xuexu4" id="xuexu45" value="4" /><label for="xuexu45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否曾經出過很多血？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="xuexu5" id="xuexu51" value="0" /><label for="xuexu51">No</label></div>
+									<div class="input"><input type="radio" name="xuexu5" id="xuexu52" value="1" /><label for="xuexu52">A little </label></div>
+									<div class="input"><input type="radio" name="xuexu5" id="xuexu53" value="2" /><label for="xuexu53">Obviously</label></div>
+									<div class="input"><input type="radio" name="xuexu5" id="xuexu54" value="3" /><label for="xuexu54">Often</label></div>
+									<div class="input"><input type="radio" name="xuexu5" id="xuexu55" value="4" /><label for="xuexu55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="yinxu">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container4">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>阴虚自测题</h3>
+								<div class="f"><span>1</span>您是否经常大便干？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yinxu3" id="yinxu31" value="0" /><label for="yinxu31">No</label></div>
+									<div class="input"><input type="radio" name="yinxu3" id="yinxu32" value="1" /><label for="yinxu32">A little </label></div>
+									<div class="input"><input type="radio" name="yinxu3" id="yinxu33" value="2" /><label for="yinxu33">Obviously</label></div>
+									<div class="input"><input type="radio" name="yinxu3" id="yinxu34" value="3" /><label for="yinxu34">Often</label></div>
+									<div class="input"><input type="radio" name="yinxu3" id="yinxu35" value="4" /><label for="yinxu35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否经常眼睛干或皮肤干？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yinxu4" id="yinxu41" value="0" /><label for="yinxu41">No</label></div>
+									<div class="input"><input type="radio" name="yinxu4" id="yinxu42" value="1" /><label for="yinxu42">A little </label></div>
+									<div class="input"><input type="radio" name="yinxu4" id="yinxu43" value="2" /><label for="yinxu43">Obviously</label></div>
+									<div class="input"><input type="radio" name="yinxu4" id="yinxu44" value="3" /><label for="yinxu44">Often</label></div>
+									<div class="input"><input type="radio" name="yinxu4" id="yinxu45" value="4" /><label for="yinxu45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否经常感到口渴？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="yinxu5" id="yinxu51" value="0" /><label for="yinxu51">No</label></div>
+									<div class="input"><input type="radio" name="yinxu5" id="yinxu52" value="1" /><label for="yinxu52">A little </label></div>
+									<div class="input"><input type="radio" name="yinxu5" id="yinxu53" value="2" /><label for="yinxu53">Obviously</label></div>
+									<div class="input"><input type="radio" name="yinxu5" id="yinxu54" value="3" /><label for="yinxu54">Often</label></div>
+									<div class="input"><input type="radio" name="yinxu5" id="yinxu55" value="4" /><label for="yinxu55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="qixu">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container5">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>气虚自测题</h3>
+								<div class="f"><span>1</span>您是否有慢性病？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qixu3" id="qixu31" value="0" /><label for="qixu31">No</label></div>
+									<div class="input"><input type="radio" name="qixu3" id="qixu32" value="1" /><label for="qixu32">A little </label></div>
+									<div class="input"><input type="radio" name="qixu3" id="qixu33" value="2" /><label for="qixu33">Obviously</label></div>
+									<div class="input"><input type="radio" name="qixu3" id="qixu34" value="3" /><label for="qixu34">Often</label></div>
+									<div class="input"><input type="radio" name="qixu3" id="qixu35" value="4" /><label for="qixu35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否工作负荷过大？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qixu4" id="qixu41" value="0" /><label for="qixu41">No</label></div>
+									<div class="input"><input type="radio" name="qixu4" id="qixu42" value="1" /><label for="qixu42">A little </label></div>
+									<div class="input"><input type="radio" name="qixu4" id="qixu43" value="2" /><label for="qixu43">Obviously</label></div>
+									<div class="input"><input type="radio" name="qixu4" id="qixu44" value="3" /><label for="qixu44">Often</label></div>
+									<div class="input"><input type="radio" name="qixu4" id="qixu45" value="4" /><label for="qixu45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否近期做过手术？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qixu5" id="qixu51" value="0" /><label for="qixu51">No</label></div>
+									<div class="input"><input type="radio" name="qixu5" id="qixu52" value="1" /><label for="qixu52">A little </label></div>
+									<div class="input"><input type="radio" name="qixu5" id="qixu53" value="2" /><label for="qixu53">Obviously</label></div>
+									<div class="input"><input type="radio" name="qixu5" id="qixu54" value="3" /><label for="qixu54">Often</label></div>
+									<div class="input"><input type="radio" name="qixu5" id="qixu55" value="4" /><label for="qixu55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="qiyu">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container6">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>气郁自测题</h3>
+								<div class="f"><span>1</span>您是否经常无缘无故叹气？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qiyu3" id="qiyu31" value="0" /><label for="qiyu31">No</label></div>
+									<div class="input"><input type="radio" name="qiyu3" id="qiyu32" value="1" /><label for="qiyu32">A little </label></div>
+									<div class="input"><input type="radio" name="qiyu3" id="qiyu33" value="2" /><label for="qiyu33">Obviously</label></div>
+									<div class="input"><input type="radio" name="qiyu3" id="qiyu34" value="3" /><label for="qiyu34">Often</label></div>
+									<div class="input"><input type="radio" name="qiyu3" id="qiyu35" value="4" /><label for="qiyu35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否经常感到不快乐？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qiyu4" id="qiyu41" value="0" /><label for="qiyu41">No</label></div>
+									<div class="input"><input type="radio" name="qiyu4" id="qiyu42" value="1" /><label for="qiyu42">A little </label></div>
+									<div class="input"><input type="radio" name="qiyu4" id="qiyu43" value="2" /><label for="qiyu43">Obviously</label></div>
+									<div class="input"><input type="radio" name="qiyu4" id="qiyu44" value="3" /><label for="qiyu44">Often</label></div>
+									<div class="input"><input type="radio" name="qiyu4" id="qiyu45" value="4" /><label for="qiyu45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否觉得两肋胀或痛？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="qiyu5" id="qiyu51" value="0" /><label for="qiyu51">No</label></div>
+									<div class="input"><input type="radio" name="qiyu5" id="qiyu52" value="1" /><label for="qiyu52">A little </label></div>
+									<div class="input"><input type="radio" name="qiyu5" id="qiyu53" value="2" /><label for="qiyu53">Obviously</label></div>
+									<div class="input"><input type="radio" name="qiyu5" id="qiyu54" value="3" /><label for="qiyu54">Often</label></div>
+									<div class="input"><input type="radio" name="qiyu5" id="qiyu55" value="4" /><label for="qiyu55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="tanshi">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container7">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>痰湿自测题</h3>
+								<div class="f"><span>1</span>您的眼珠或眼瞼上有脂肪粒嗎？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="tanshi3" id="tanshi31" value="0" /><label for="tanshi31">No</label></div>
+									<div class="input"><input type="radio" name="tanshi3" id="tanshi32" value="1" /><label for="tanshi32">A little </label></div>
+									<div class="input"><input type="radio" name="tanshi3" id="tanshi33" value="2" /><label for="tanshi33">Obviously</label></div>
+									<div class="input"><input type="radio" name="tanshi3" id="tanshi34" value="3" /><label for="tanshi34">Often</label></div>
+									<div class="input"><input type="radio" name="tanshi3" id="tanshi35" value="4" /><label for="tanshi35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否有很多痰？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="tanshi4" id="tanshi41" value="0" /><label for="tanshi41">No</label></div>
+									<div class="input"><input type="radio" name="tanshi4" id="tanshi42" value="1" /><label for="tanshi42">A little </label></div>
+									<div class="input"><input type="radio" name="tanshi4" id="tanshi43" value="2" /><label for="tanshi43">Obviously</label></div>
+									<div class="input"><input type="radio" name="tanshi4" id="tanshi44" value="3" /><label for="tanshi44">Often</label></div>
+									<div class="input"><input type="radio" name="tanshi4" id="tanshi45" value="4" /><label for="tanshi45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>您是否喜欢吃甜食、猪牛羊肉、油炸食品？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="tanshi5" id="tanshi51" value="0" /><label for="tanshi51">No</label></div>
+									<div class="input"><input type="radio" name="tanshi5" id="tanshi52" value="1" /><label for="tanshi52">A little </label></div>
+									<div class="input"><input type="radio" name="tanshi5" id="tanshi53" value="2" /><label for="tanshi53">Obviously</label></div>
+									<div class="input"><input type="radio" name="tanshi5" id="tanshi54" value="3" /><label for="tanshi54">Often</label></div>
+									<div class="input"><input type="radio" name="tanshi5" id="tanshi55" value="4" /><label for="tanshi55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="shire">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container8">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>湿热自测题</h3>
+								<div class="f"><span>1</span>您容易生痤疮或疮疖吗？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="shire3" id="shire31" value="0" /><label for="shire31">No</label></div>
+									<div class="input"><input type="radio" name="shire3" id="shire32" value="1" /><label for="shire32">A little </label></div>
+									<div class="input"><input type="radio" name="shire3" id="shire33" value="2" /><label for="shire33">Obviously</label></div>
+									<div class="input"><input type="radio" name="shire3" id="shire34" value="3" /><label for="shire34">Often</label></div>
+									<div class="input"><input type="radio" name="shire3" id="shire35" value="4" /><label for="shire35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否有不卫生的习惯？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="shire4" id="shire41" value="0" /><label for="shire41">No</label></div>
+									<div class="input"><input type="radio" name="shire4" id="shire42" value="1" /><label for="shire42">A little </label></div>
+									<div class="input"><input type="radio" name="shire4" id="shire43" value="2" /><label for="shire43">Obviously</label></div>
+									<div class="input"><input type="radio" name="shire4" id="shire44" value="3" /><label for="shire44">Often</label></div>
+									<div class="input"><input type="radio" name="shire4" id="shire45" value="4" /><label for="shire45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>（女）您是否白带颜色黄或有异味？（男）您是否阴囊潮湿</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="shire5" id="shire51" value="0" /><label for="shire51">No</label></div>
+									<div class="input"><input type="radio" name="shire5" id="shire52" value="1" /><label for="shire52">A little </label></div>
+									<div class="input"><input type="radio" name="shire5" id="shire53" value="2" /><label for="shire53">Obviously</label></div>
+									<div class="input"><input type="radio" name="shire5" id="shire54" value="3" /><label for="shire54">Often</label></div>
+									<div class="input"><input type="radio" name="shire5" id="shire55" value="4" /><label for="shire55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+		<section class="toup" id="re">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+				<!-- 上下 -->
+				<div class="swiper-container9">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>实热自测题</h3>
+								<div class="f"><span>1</span>您是否喜欢动不喜欢静呢？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="re3" id="re31" value="0" /><label for="re31">No</label></div>
+									<div class="input"><input type="radio" name="re3" id="re32" value="1" /><label for="re32">A little </label></div>
+									<div class="input"><input type="radio" name="re3" id="re33" value="2" /><label for="re33">Obviously</label></div>
+									<div class="input"><input type="radio" name="re3" id="re34" value="3" /><label for="re34">Often</label></div>
+									<div class="input"><input type="radio" name="re3" id="re35" value="4" /><label for="re35">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>2</span>您是否天涼還吃食物加冰或冰激凌？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="re4" id="re41" value="0" /><label for="re41">No</label></div>
+									<div class="input"><input type="radio" name="re4" id="re42" value="1" /><label for="re42">A little </label></div>
+									<div class="input"><input type="radio" name="re4" id="re43" value="2" /><label for="re43">Obviously</label></div>
+									<div class="input"><input type="radio" name="re4" id="re44" value="3" /><label for="re44">Often</label></div>
+									<div class="input"><input type="radio" name="re4" id="re45" value="4" /><label for="re45">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="scores">
+								<h3>&nbsp;</h3>
+								<div class="f"><span>3</span>是否有人说您的聲大震耳？</div>
+								<div class="choose">
+									<div class="input"><input type="radio" name="re5" id="re51" value="0" /><label for="re51">No</label></div>
+									<div class="input"><input type="radio" name="re5" id="re52" value="1" /><label for="re52">A little </label></div>
+									<div class="input"><input type="radio" name="re5" id="re53" value="2" /><label for="re53">Obviously</label></div>
+									<div class="input"><input type="radio" name="re5" id="re54" value="3" /><label for="re54">Often</label></div>
+									<div class="input"><input type="radio" name="re5" id="re55" value="4" /><label for="re55">Frequently</label></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--	<div class="preNexts">
+				<div class="swiper-button-prev"><div class="pre"></div>上一题</div>
+				<div class="swiper-button-next"><div class="next"></div>下一题</div>
+			</div> -->
+				</div>
+				<!-- 上下end -->
+			</div>
+		</section>
+
+		<section class="toup" id="t3">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+
+				<div class="con con1">
+					<!--<input type="number" name="" class="phone" placeholder="手机号码"/>-->
+
+					<div class="con">
+						<p>You're finished!</p>
+						<p>Radar chart below, click 'Details' button to see details</p>
+					</div>
+				</div>
+
+				<!--< href="javascript:;" class="tijiao" onclick="try()">提交测评</a>-->
+				<input type="button" class="tijiao" onclick="submit()" value="Details" />
+
+				<div class="con " id="smg1">
+					<div id="chartdiv" style="visibility: hidden;"></div>
+					<p id="smg">
+						
+					</p>
+
+				</div>
+
+			</div>
+
+			</div>
+		</section>
+
+		<section class="toup" id="t4">
+			<!-- <div class="logo">
+			<img src="images/logo.png"/>
+		</div> -->
+			<div class="swipers">
+
+				<div class="con">
+					<p>你已经完成第一步啦</p>
+					<p>还有一步就结束啦</p>
+				</div>
+				<a href="javascript:;" class="jjj">继续</a>
+
+			</div>
+
+		</section>
+
+		<script src="swiper/swiper.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#t2").hide();
+					$("#t4").show();
+				}
+			});
+
+			var mySwiperYuxue = new Swiper('.swiper-container1', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#yuxue").hide();
+					display();
+				}
+			});
+
+			var mySwiperYangxu = new Swiper('.swiper-container2', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#yangxu").hide();
+					display();
+				}
+			});
+			var mySwiperXuexu = new Swiper('.swiper-container3', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#xuexu").hide();
+					display();
+				}
+			});
+			var mySwiperYinxu = new Swiper('.swiper-container4', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#yinxu").hide();
+					display();
+				}
+			});
+			var mySwiperQixu = new Swiper('.swiper-container5', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#qixu").hide();
+					display();
+				}
+			});
+			var mySwiperQiyu = new Swiper('.swiper-container6', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#qiyu").hide();
+					display();
+				}
+			});
+			var mySwiperTanshi = new Swiper('.swiper-container7', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#tanshi").hide();
+					display();
+				}
+			});
+			var mySwiperShire = new Swiper('.swiper-container8', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#shire").hide();
+					display();
+				}
+			});
+			var mySwiperRe = new Swiper('.swiper-container9', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true,
+				onReachEnd: function(swiper) {
+					$("#re").hide();
+					display();
+				}
+			});
+
+			$("#t2,#t3,#t4,#yuxue,#yangxu,#xuexu,#yinxu,#qixu,#qiyu,#tanshi,#shire,#re").hide();
+			$("a.jion").on("click", function() {
+				$("#t1").hide();
+				$("#t2").show();
+			});
+
+			$(".swiper-container label,.swiper-container input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiper.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container1 label,.swiper-container1 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperYuxue.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container2 label,.swiper-container2 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperYangxu.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container3 label,.swiper-container3 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperXuexu.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container4 label,.swiper-container4 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperYinxu.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container5 label,.swiper-container5 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperQixu.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container6 label,.swiper-container6 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperQiyu.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container7 label,.swiper-container7 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperTanshi.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container8 label,.swiper-container8 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperShire.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$(".swiper-container9 label,.swiper-container9 input").click(function() {
+				var this_active = $(this).parents(".swiper-slide").index();
+				setTimeout(function() {
+					mySwiperRe.slideTo(this_active + 1, 1000)
+				}, 500);
+			});
+			$('.swiper-button-next').click(function() {
+				if(mySwiper.isEnd) {
+					$("#t2").hide();
+					$("#t4").show();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperYuxue.isEnd) {
+					$("yuxue").hide();
+					display();
+
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperYangxu.isEnd) {
+					$("yangxu").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperXuexu.isEnd) {
+					$("xuexu").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperYinxu.isEnd) {
+					$("yinxu").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperQixu.isEnd) {
+					$("qixu").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperQiyu.isEnd) {
+					$("qiyu").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperTanshi.isEnd) {
+					$("tanshi").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperShire.isEnd) {
+					$("shire").hide();
+					display();
+				}
+			})
+			$('.swiper-button-next').click(function() {
+				if(mySwiperRe.isEnd) {
+					$("re").hide();
+					display();
+				}
+			})
+
+			$("a.jjj").on("click", function() {
+				$("#t4").hide();
+				compute();
+				display();
+
+			});
+		</script>
+
+		<script>
+			var chart = AmCharts.makeChart("chartdiv", {
+				"type": "radar",
+				"theme": "none",
+				"dataProvider": [{
+					"country": "Qi Deficiency",
+					"litres": 0.48
+				}, {
+					"country": "Blood Deficiency",
+					"litres": 0.41
+				}, {
+					"country": "Yin Deficiency",
+					"litres": 0.27
+				}, {
+					"country": "Yang Deficiency",
+					"litres": 0.28
+				}, {
+					"country": "Sthenia Heat",
+					"litres": 0.46
+				}, {
+					"country": "Dampness Heat",
+					"litres": 0.29
+				}, {
+					"country": "Phlegmatic Hygrosis",
+					"litres": 0.29
+				}, {
+					"country": "Qi Stagnation",
+					"litres": 0.15
+				}, {
+					"country": "Blood Stasis",
+					"litres": 0.20
+				}, {
+					"country": "Irritable",
+					"litres": 0.19
+				}, {
+					"country": "Harmony",
+					"litres": 0.25
+				}],
+				"valueAxes": [{
+					"axisTitleOffset": 20,
+					"minimum": 0,
+					"axisAlpha": 0.15
+				}],
+				"startDuration": 2,
+				"graphs": [{
+					"balloonText": "[[value]] litres of beer per year",
+					"bullet": "round",
+					"lineThickness": 2,
+					"valueField": "litres"
+				}],
+				"categoryField": "country",
+				"export": {
+					"enabled": true
+				}
+			});
+		</script>
+	</body>
+
+</html>
